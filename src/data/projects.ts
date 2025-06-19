@@ -1,12 +1,12 @@
-export const fullStackProjects = [
+export const frontEndProjects = [
   {
     title: "Health Monitoring Web App",
     description:
-      "Comprehensive health tracking platform with real-time monitoring, analytics dashboard, and patient management system.",
+      "Front-end application for health tracking with real-time data visualization and patient dashboards.",
     fullDescription:
-      "A full-stack healthcare solution designed to monitor patient vitals, track medication schedules, and provide healthcare professionals with comprehensive analytics. The platform features real-time data synchronization, secure patient data management, and intuitive dashboards for both patients and healthcare providers.",
+      "Developed the front-end interface for a health monitoring platform, focusing on real-time vital signs display and medication tracking. Implemented responsive dashboards using React and Chart.js, integrating APIs and WebSocket endpoints provided by the instructor. Delivered an intuitive and accessible UI optimized for both patients and healthcare providers.",
     image: "health-app.jpg",
-    tags: ["React", "Node.js", "MongoDB", "Socket.io", "Chart.js"],
+    tags: ["React", "Chart.js", "JavaScript", "REST API", "WebSocket"],
     links: [
       { label: "Live Demo", url: "https://health-monitor-demo.vercel.app" },
       {
@@ -15,18 +15,16 @@ export const fullStackProjects = [
       },
     ],
     features: [
-      "Real-time vital signs monitoring with WebSocket integration",
-      "Secure patient data management",
+      "Real-time vital signs visualization using WebSocket data",
       "Interactive analytics dashboard with customizable charts",
-      "Medication reminder system with push notifications",
-      "Multi-role access control for patients and healthcare providers",
       "Responsive design optimized for tablets and mobile devices",
+      "Integrated teacher-provided REST and WebSocket APIs",
+      "User-friendly interface for patients and healthcare providers",
     ],
     challenges: [
-      "Implementing real-time data synchronization across multiple clients",
-      "Ensuring data security and privacy best practices",
-      "Optimizing database queries for performance",
-      "Designing intuitive UX for users with varying technical expertise",
+      "Integrating live data streams on the front end",
+      "Ensuring responsive and accessible UI design",
+      "Handling asynchronous API data and updating charts dynamically",
     ],
     duration: "1 month",
     team: "Pair project",
