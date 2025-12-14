@@ -26,7 +26,7 @@ function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [activeProjectType, setActiveProjectType] = useState<
     "fullstack" | "datascience"
-  >("fullstack");
+  >("datascience");
   const [formStatus, setFormStatus] = useState<null | {
     type: "success" | "error";
     message: string;
@@ -106,7 +106,9 @@ function App() {
   };
 
   const currentProjects =
-    activeProjectType === "fullstack" ? fullStackProjects : dataScienceProjects;
+    activeProjectType === "datascience"
+      ? dataScienceProjects
+      : fullStackProjects;
 
   return (
     <div className="bg-gray-900 text-white min-h-screen">
@@ -325,16 +327,6 @@ function App() {
           <div className="flex justify-center mb-12">
             <div className="bg-gray-800 p-1 rounded-full">
               <button
-                onClick={() => setActiveProjectType("fullstack")}
-                className={`px-6 py-2 rounded-full transition-all duration-300 font-medium ${
-                  activeProjectType === "fullstack"
-                    ? "bg-purple-600 text-white shadow-lg"
-                    : "text-gray-300 hover:text-white"
-                }`}
-              >
-                Full Stack
-              </button>
-              <button
                 onClick={() => setActiveProjectType("datascience")}
                 className={`px-6 py-2 rounded-full transition-all duration-300 font-medium ${
                   activeProjectType === "datascience"
@@ -345,6 +337,16 @@ function App() {
                 Data Science
               </button>
             </div>
+            <button
+              onClick={() => setActiveProjectType("fullstack")}
+              className={`px-6 py-2 rounded-full transition-all duration-300 font-medium ${
+                activeProjectType === "fullstack"
+                  ? "bg-purple-600 text-white shadow-lg"
+                  : "text-gray-300 hover:text-white"
+              }`}
+            >
+              Full Stack
+            </button>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

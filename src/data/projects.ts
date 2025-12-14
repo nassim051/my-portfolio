@@ -1,4 +1,4 @@
-export const frontEndProjects = [
+export const fullStackProjects = [
   {
     title: "Health Monitoring Web App",
     description:
@@ -33,47 +33,52 @@ export const frontEndProjects = [
 
 export const dataScienceProjects = [
   {
-    title: "Market Real Volume Analysis & Automated Trading Bot",
+    title: "Short Video Recommendation System (KUAIREC)",
     description:
-      "Data pipeline and trading system to identify genuine market volumes and execute trades on promising pairs using reliable exchange data.",
+      "In this project, we designed and evaluated multiple recommendation system approaches for short-form videos using the KUAIREC dataset.",
     fullDescription:
-      "A long-term project focused on building a scalable solution that fetches market data from multiple exchanges, filters out artificial volume to calculate real trading activity, and engineers features to highlight valuable trading pairs. The data is stored efficiently in SQLite for analysis. The project also includes an automated trading bot that leverages these insights to perform real-time trades with risk controls. Emphasizes data accuracy, robustness, and maintainability for consistent market analysis and automated execution.",
-    image:
-      "https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "We conducted an in-depth analysis of user–video interaction data over a 3-month period and engineered a normalized engagement score based on watch ratios and video duration. Multiple recommendation strategies were implemented and compared, including content-based filtering using tags and text embeddings (SBERT), user profiling with vectorized tag representations, item-item similarity with Jaccard and cosine similarity, and collaborative filtering methods such as KNN with Pearson similarity and matrix factorization (SVD). The system was evaluated using Precision@N, Recall@N, NDCG@N, RMSE, and MAE to compare performance across approaches.",
+    image: "recommendation-system.png?auto=compress&cs=tinysrgb&w=800",
     tags: [
-      "Python",
-      "SQLite3",
-      "Pandas",
-      "NumPy",
-      "ccxt",
-      "REST API",
-      "WebSocket",
-      "Trading Bot",
+      "Content-Based Filtering",
+      "Collaborative Filtering",
+      "SBERT",
+      "Sentence Transformers",
+      "SVD",
+      "KNN",
     ],
     links: [
       {
-        label: "GitHub",
-        url: "https://github.com/yourusername/exchange-market-analysis",
+        label: "Google Drive (Dataset)",
+        url: "https://drive.google.com/drive/folders/1amJ6MOlUdjU5wvW1HEGmFyjzMDIM6ZfZ?usp=sharing",
+      },
+      {
+        label: "Google Colab",
+        url: "https://colab.research.google.com/drive/1D2l9ZZbcupWoZLPquCV1vbJP2J6kgNwZ?usp=sharing",
       },
     ],
     features: [
-      "Real-time and historical market data aggregation from multiple sources",
-      "Advanced filtering techniques to exclude fake or inflated volume",
-      "Feature engineering to detect promising trading pairs",
-      "Efficient data storage and querying using SQLite",
-      "Automated trading bot implementing strategy based on data signals",
-      "Focus on data integrity and robustness across exchanges",
+      "Exploratory analysis of large-scale user–video interaction data",
+      "Custom engagement score modeling from watch ratios",
+      "Content-based recommendation using video tags (Jaccard similarity)",
+      "Text-based recommendation with SBERT embeddings (cosine similarity)",
+      "User profiling via vectorized tag thresholds",
+      "Item-item similarity precomputation for fast inference",
+      "Collaborative filtering with KNN (Pearson similarity)",
+      "Matrix factorization using SVD (Surprise library)",
+      "Evaluation using Precision@N, Recall@N, NDCG@N, RMSE, and MAE",
     ],
     challenges: [
-      "Detecting and filtering artificial trading volumes",
-      "Building a scalable, reliable data pipeline for large data sets",
-      "Optimizing database performance under frequent updates",
-      "Designing automated strategies with risk management",
-      "Maintaining data consistency across diverse APIs",
+      "Designing a meaningful engagement score that balances video completion and repetition",
+      "Scaling similarity computations for large sets of videos",
+      "Selecting appropriate evaluation metrics for ranking-based recommendations",
+      "Iteratively implementing and refining multiple recommendation approaches to identify limitations and improve performance",
+      "Fairly comparing content-based and collaborative filtering approaches",
     ],
-    duration: "2 years (ongoing)",
-    team: "Solo project",
+    duration: "4 weeks",
+    team: "Team of 4",
   },
+
   {
     title: "Gesture-Controlled Nao Robot in Webots",
     description:
@@ -120,5 +125,47 @@ export const dataScienceProjects = [
     ],
     duration: "1 week",
     team: "Team of 4",
+  },
+  {
+    title: "Market Real Volume Analysis & Automated Trading Bot",
+    description:
+      "Data pipeline and trading system to identify genuine market volumes and execute trades on promising pairs using reliable exchange data.",
+    fullDescription:
+      "A long-term project focused on building a scalable solution that fetches market data from multiple exchanges, filters out artificial volume to calculate real trading activity, and engineers features to highlight valuable trading pairs. The data is stored efficiently in SQLite for analysis. The project also includes an automated trading bot that leverages these insights to perform real-time trades with risk controls. Emphasizes data accuracy, robustness, and maintainability for consistent market analysis and automated execution.",
+    image:
+      "https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=800",
+    tags: [
+      "Python",
+      "SQLite3",
+      "Pandas",
+      "NumPy",
+      "ccxt",
+      "REST API",
+      "WebSocket",
+      "Trading Bot",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/yourusername/exchange-market-analysis",
+      },
+    ],
+    features: [
+      "Real-time and historical market data aggregation from multiple sources",
+      "Advanced filtering techniques to exclude fake or inflated volume",
+      "Feature engineering to detect promising trading pairs",
+      "Efficient data storage and querying using SQLite",
+      "Automated trading bot implementing strategy based on data signals",
+      "Focus on data integrity and robustness across exchanges",
+    ],
+    challenges: [
+      "Detecting and filtering artificial trading volumes",
+      "Building a scalable, reliable data pipeline for large data sets",
+      "Optimizing database performance under frequent updates",
+      "Designing automated strategies with risk management",
+      "Maintaining data consistency across diverse APIs",
+    ],
+    duration: "2 years (ongoing)",
+    team: "Solo project",
   },
 ];
